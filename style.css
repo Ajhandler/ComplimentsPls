@@ -1,0 +1,148 @@
+/* Remove input styling */
+
+textarea, button, input { 
+	padding: 0;
+	margin: 0;
+	outline: none; 
+	border: 0;
+}
+
+/*basic styles */
+body, html{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+
+}
+body{
+	background: rgba(52,152,219,1);
+	font-family: 'Montserrat', sans-serif;'
+	color:rgba(60,81,95,1);
+}
+
+.wrapper{
+	width: 90%;
+	margin: 0 auto;
+	
+}
+.instructions, .Noname{
+	margin: 0 auto;
+	background: #16405B;
+	width: 50%;
+	height: 400px;
+	box-shadow: 10px 10px 5px rgba(60,81,95, .5);
+	margin-top: 10%;
+	position: relative;
+	top: 0;
+}
+.Noname{
+	position: absolute;
+	z-index: 2;
+	top:-1000px;
+	display: none;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.large{
+	font-size: 2em;
+}
+.instructions p, .Noname p{
+	color: white;
+	padding: 10%;
+	margin: 0;
+	text-align: center;
+	width: 80%;
+}
+#hi, #compliment{
+   width: 100%;
+   margin: 0 auto;
+   color:rgba(60,81,95,1);
+   
+}
+ #hi h1{
+	font-size: 6em;
+	margin-top: 12%;
+	margin-bottom: 0;
+	position: relative;
+	left: -500px;
+}
+#compliment h2{
+  font-size: 4em;
+  position: relative;
+  bottom: -500px;
+
+}
+#h1 h1, #compliment h2{
+	margin: 0 auto;
+}
+
+/*input styles */
+
+ #name{
+	width: 70%;
+	height: 79px;
+	background: rgba(32,75,95,.5);
+	color:rgba(60,81,95,1);
+	padding-left: 10%;
+	font-size: 3em;
+  
+
+	/*border-bottom: 1px solid rgb(60,81,95);
+	border-right: 1px solid rgb(60,81,95);;*/
+
+}
+	/* Changes place holder colors on text input */
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    rgba(60,81,95,1);
+
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    rgba(60,81,95,1)
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    rgba(60,81,95,1)
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    rgba(60,81,95,1)
+}
+
+#submit{
+	width: 15%;
+	position: absolute;
+	right: 0;
+	height: 77px;
+	background: #90C2E4;
+	color:rgba(60,81,95,1);
+	box-shadow: 0px 3px 0px 0px rgba(60,81,95, .5);
+}
+
+#submit:active{
+	box-shadow: none;
+}
+
+
+@media screen and (max-width: 900px){
+	body,html{
+		font-size: 90%;
+		overflow-x: hidden;
+	}
+	
+	#name{
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+	
+	#submit{
+		position: static;
+		width: 100%;
+	}
+	.instructions, .Noname{
+		width: 100%;
+		height: 300px;
+	}
+}
