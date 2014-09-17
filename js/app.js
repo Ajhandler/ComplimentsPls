@@ -72,7 +72,7 @@ $(".instructions").delay(2000).animate({"top": "-1000px" },function(){
 	function complimentPls(){
 		var $charname = $("#name").val().charCodeAt();
 		var $name = $("#name").val();
-		if ($name == "" || $charname <= 57 || $charname >= 91) {
+		if ($name == "") {
 			$(".Noname").show().animate({"top": "190px"},function(){
 				$(this).delay(1000).animate({"top": "-2000px"},function(){
 				});
