@@ -34,8 +34,13 @@ body{
 	top: 0;
 }
 .Noname{
+	position: absolute;
+	z-index: 2;
 	top:-1000px;
 	display: none;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 }
 .large{
 	font-size: 2em;

@@ -59,32 +59,34 @@ $(".instructions").delay(2000).animate({"top": "-1000px" },function(){
 	compliments[50]    = "You are more fun than a Japanese steakhouse."
 	// Binds enter to submit button. Prevents form submission.
 	$(document).keypress(function(event) {
-        if (event.keyCode == 13) {
-          $("#submit").click();
-          return false;
+        if (event.keyCode == 13) {  
+           complimentPls();
+           return false;
         }
     });
+
 	$("#submit").click(function() {
-		// take the users name and add it to page with "hi --username"
+		complimentPls();
+	});
+
+	function complimentPls(){
+		var $charname = $("#name").val().charCodeAt();
 		var $name = $("#name").val();
-		if ($name == "") {
-			$(".Noname").show().animate({"top": "0px"},function(){
-				$(this).delay(1000).animate({"top": "-1000px"},function(){
-					$(this).remove()
+		if ($name == "" || $charname <= 57 || $charname >= 91) {
+			$(".Noname").show().animate({"top": "190px"},function(){
+				$(this).delay(1000).animate({"top": "-2000px"},function(){
 				});
 			});
-			return false;
+					}else{
+			$("#hi h1").replaceWith("<h1>Hi, "  + $name  )
+			$("#hi h1").animate({'left':'0px'},function(){
+				$("#compliment h2").animate({'bottom': '0px'})
+			})
+			//pull from random list of compliments, add compliment after user name
+			var myRandom = Math.floor(Math.random()*compliments.length);
+			$("#compliment h2").replaceWith("<h2>" + compliments[myRandom]);
 		};
-		$("#hi h1").replaceWith("<h1>Hi, "  + $name  )
-		$("#hi h1").animate({'left':'0px'},function(){
-			$("#compliment h2").animate({'bottom': '0px'})
-		})
-		//pull from random list of compliments, add compliment after user name
-		var myRandom = Math.floor(Math.random()*compliments.length);
-		$("#compliment h2").replaceWith("<h2>" + compliments[myRandom]);
-		console.log(compliments[myRandom]);
-
-	});
+	}
 
 
 
