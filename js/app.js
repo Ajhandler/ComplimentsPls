@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
 $("input:text:visible:first").focus();
+$(".instructions").delay(2000).animate({"top": "-1000px" },function(){
+	$(this).remove();
+})
 // An array of all the very nice compliments
 	var compliments = new Array;
 	compliments[0] = "You're just swell";
@@ -40,12 +43,17 @@ $("input:text:visible:first").focus();
 		// take the users name and add it to page with "hi --username"
 		var $name = $("#name").val();
 		$("#hi h1").replaceWith("<h1>Hi, "  + $name  )
+		$("#hi h1").animate({'left':'0px'},function(){
+			$("#compliment h2").animate({'bottom': '0px'})
+		})
 		//pull from random list of compliments, add compliment after user name
 		var myRandom = Math.floor(Math.random()*compliments.length);
 		$("#compliment h2").replaceWith("<h2>" + compliments[myRandom]);
 		console.log(compliments[myRandom]);
 
 	});
+
+
 
 
 
