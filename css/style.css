@@ -28,7 +28,7 @@ body{
 	background: #16405B;
 	width: 50%;
 	height: 400px;
-	box-shadow: 3px 3px 5px rgba(60,81,95, .5);
+	box-shadow: 10px 10px 5px rgba(60,81,95, .5);
 	margin-top: 10%;
 	position: relative;
 	top: 0;
@@ -69,12 +69,14 @@ body{
 /*input styles */
 
  #name{
-	width: 52%;
-	height: 80px;
+	width: 70%;
+	height: 79px;
 	background: rgba(32,75,95,.5);
 	color:rgba(60,81,95,1);
-	padding-left: 28%;
-	font-size: 2em;
+	padding-left: 10%;
+	font-size: 3em;
+	/*border-bottom: 1px solid rgb(60,81,95);
+	border-right: 1px solid rgb(60,81,95);;*/
 
 }
 	/* Changes place holder colors on text input */

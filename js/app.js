@@ -38,7 +38,32 @@ $(".instructions").delay(2000).animate({"top": "-1000px" },function(){
 	compliments[29]  = "I bet you could take a punch from Mike Tyson.";
 	compliments[30]  = " You're cooler than ice on the rocks.";
 	compliments[31]  = "If you really wanted to, you could probably get a bird to land on your shoulder and hang out with you.";
-
+	compliments[32]    = "Your skin is nice."
+	compliments[33]    = "Say, aren't you that famous model from TV?"
+	compliments[34]    = "I would love to visit you, but I live on the Internet."
+	compliments[35]    = "I love the way you click."
+	compliments[36]    = "If I freeze, it's not a computer virus.  I was just stunned by your beauty."
+	compliments[37]    = "You could go longer without a shower than most people."
+	compliments[38]    = "I heard you make really good French Toast."
+	compliments[39]    = "Well played."
+	compliments[40]    = "You could totally get away with a fedora."
+	compliments[41]    = " I think about you while I'm on the toilet."
+	compliments[42]    = "Your body fat percentage is perfectly suited for your height."
+	compliments[43]    = "If you broke your arm, I would carry your books for you."
+	compliments[44]    = "I could hangout with you for a few hours and not be annoyed!"
+	compliments[45]    = "I would trust my children with you."
+	compliments[46]    = "You have a perfectly symmetrical face."
+	compliments[47]    = "The Force is strong with you."
+	compliments[48]    = "My camera isn't worthy to take your picture."
+	compliments[49]    = "I'd like to kiss you. Often."
+	compliments[50]    = "You are more fun than a Japanese steakhouse."
+	// Binds enter to submit button. Prevents form submission.
+	$(document).keypress(function(event) {
+        if (event.keyCode == 13) {
+          $("#submit").click();
+          return false;
+        }
+    });
 	$("#submit").click(function() {
 		// take the users name and add it to page with "hi --username"
 		var $name = $("#name").val();
