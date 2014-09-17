@@ -3,5 +3,5 @@
 A small project that makes you feel good about yourself. Made for NYCDA'S WDI program.
 
 =====
-if you like this follow me on [twitter](https://wwww.twitter.com/ajhandler)
+if you like this follow me on [twitter](https://wwww.twitter.com/alexjhandler)
 
