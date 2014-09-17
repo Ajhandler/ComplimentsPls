@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+$("input:text:visible:first").focus();
 // An array of all the very nice compliments
 	var compliments = new Array;
 	compliments[0] = "You're just swell";
@@ -38,7 +39,7 @@ $(document).ready(function(){
 	$("#submit").click(function() {
 		// take the users name and add it to page with "hi --username"
 		var $name = $("#name").val();
-		$("#hi h1").replaceWith("<h1>Hi "  + $name  )
+		$("#hi h1").replaceWith("<h1>Hi, "  + $name  )
 		//pull from random list of compliments, add compliment after user name
 		var myRandom = Math.floor(Math.random()*compliments.length);
 		$("#compliment h2").replaceWith("<h2>" + compliments[myRandom]);
