@@ -67,6 +67,14 @@ $(".instructions").delay(2000).animate({"top": "-1000px" },function(){
 	$("#submit").click(function() {
 		// take the users name and add it to page with "hi --username"
 		var $name = $("#name").val();
+		if ($name == "") {
+			$(".Noname").show().animate({"top": "0px"},function(){
+				$(this).delay(1000).animate({"top": "-1000px"},function(){
+					$(this).remove()
+				});
+			});
+			return false;
+		};
 		$("#hi h1").replaceWith("<h1>Hi, "  + $name  )
 		$("#hi h1").animate({'left':'0px'},function(){
 			$("#compliment h2").animate({'bottom': '0px'})

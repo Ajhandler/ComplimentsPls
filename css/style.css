@@ -23,7 +23,7 @@ body{
 	margin: 0 auto;
 	
 }
-.instructions{
+.instructions, .Noname{
 	margin: 0 auto;
 	background: #16405B;
 	width: 50%;
@@ -33,10 +33,14 @@ body{
 	position: relative;
 	top: 0;
 }
+.Noname{
+	top:-1000px;
+	display: none;
+}
 .large{
 	font-size: 2em;
 }
-.instructions p{
+.instructions p, .Noname p{
 	color: white;
 	padding: 10%;
 	margin: 0;
