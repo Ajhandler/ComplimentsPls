@@ -11,6 +11,8 @@ textarea, button, input {
 body, html{
 	height: 100%;
 	width: 100%;
+	font-size: 100%;
+
 }
 body{
 	background: rgba(52,152,219,1);
@@ -84,6 +86,8 @@ body{
 	color:rgba(60,81,95,1);
 	padding-left: 10%;
 	font-size: 3em;
+  
+
 	/*border-bottom: 1px solid rgb(60,81,95);
 	border-right: 1px solid rgb(60,81,95);;*/
 
@@ -118,4 +122,27 @@ body{
 
 #submit:active{
 	box-shadow: none;
+}
+
+
+@media screen and (max-width: 900px){
+	body,html{
+		font-size: 90%;
+		overflow-x: hidden;
+	}
+	
+	#name{
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+	
+	#submit{
+		position: static;
+		width: 100%;
+	}
+	.instructions, .Noname{
+		width: 100%;
+		height: 300px;
+	}
 }
