@@ -1,6 +1,7 @@
 $(document).ready(function(){
-
+// Blink Blink
 $("input:text:visible:first").focus();
+// Handles intro box animations on pageload
 $(".instructions").delay(2000).animate({"top": "-1000px" },function(){
 	$(this).remove();
 })
@@ -69,21 +70,30 @@ $(".instructions").delay(2000).animate({"top": "-1000px" },function(){
 		complimentPls();
 	});
 
+	// Bread and butter
 	function complimentPls(){
+		// find what char code user value is.
 		var $charname = $("#name").val().charCodeAt();
+		//get value of user input
 		var $name = $("#name").val();
-		if ($name == "") {
+		// if the user enters nothing, or a number .Noname is showed and run
+		if ($name == "" || $charname >= 47 && $charname <= 57) {
+			// deals with animation of .Noname
 			$(".Noname").show().animate({"top": "190px"},function(){
 				$(this).delay(1000).animate({"top": "-2000px"},function(){
 				});
 			});
 					}else{
+			// if user input is good write the greeting + name
 			$("#hi h1").replaceWith("<h1>Hi, "  + $name  )
+			// animates the greeting + name
 			$("#hi h1").animate({'left':'0px'},function(){
+				/// animates the compliment
 				$("#compliment h2").animate({'bottom': '0px'})
 			})
-			//pull from random list of compliments, add compliment after user name
+			//takes the length of compliments array calls a random index and rounds down.
 			var myRandom = Math.floor(Math.random()*compliments.length);
+			//pull from random list of compliments, add compliment after user name
 			$("#compliment h2").replaceWith("<h2>" + compliments[myRandom]);
 		};
 	}
